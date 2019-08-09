@@ -1,0 +1,150 @@
+.shelf-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  min-height: 600px;
+
+
+  &-header {
+    width: 100%;
+    margin-bottom: 10px;
+    
+
+    .products-found {
+      float: left;
+      margin: 0;
+      margin-top: 8px;
+      background-color:  #05be68;
+      color:white;
+      padding:5px;
+    }
+
+    .sort {
+      float: right;
+
+      select {
+        background-color: #fff;
+        outline: none;
+        border: 1px solid #05be68;
+        border-radius: 2px;
+        margin-left: 10px;
+        width: auto;
+        height: 35px;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid #5b5a5e;
+        }
+      }
+    }
+  }
+
+  .shelf-item {
+    width: 25%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  
+
+    &:hover {
+      border: 1px solid #eee;
+      box-shadow: 5px 18px 15px rgb(216, 216, 216);
+
+      .shelf-item__buy-btn {
+        background-color: #05be68;
+        background-image: url('../../static/bag-icon1.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 20px 0;
+        border-top: 0px solid black;
+
+        
+      }
+
+      
+      
+      
+    }
+
+    .shelf-stopper {
+      position: absolute;
+      color: black;
+      top: 15px;
+      right: 15px;
+      padding: 5px;
+      font-size: 0.6em;
+      background-color: transparent;
+      cursor: default;
+      border: 1px solid #d3a40a;
+      border-radius: 30%
+      
+    }
+
+    &__thumb {
+      img {
+        width: 100%;
+        max-height:290px;
+      }
+    }
+
+    &__title {
+      position: relative;
+      padding: 0 20px;
+      height: 45px;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: #05be68;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -10px;
+      }
+    }
+
+    &__price {
+      height: 60px;
+
+      .val {
+        b {
+          font-size: 1.3em;
+          margin-left: 5px;
+        }
+      }
+
+      .installment {
+        color: #9c9b9b;
+      }
+    }
+
+    &__buy-btn {
+      background-color: white;
+      color: #fff;
+      padding: 20px 0;
+      margin-top: 0px;
+      cursor: pointer;
+      border-top: 5px solid black;
+     
+
+
+      transition: background-color 0.2s;
+    }
+    &__buy-add {
+      background-color: white;
+      color: black;
+      padding: 10px 0;
+      margin-top: 0px;
+      cursor: pointer;
+     
+
+
+      transition: background-color 0.2s;
+    }
+  }
+}
